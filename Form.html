@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>Sign Up Form Prototype</title>
+</head>
+
+<body>
+	<form action="https://api.elasticemail.com/contact/add?version=2" method="post" id="ewf_subscriptionForm">
+		<fieldset style="border:none;">
+			<input type="hidden" name="publicaccountid" value="453cc5c0-2a57-4c18-a663-b41a0ce546ca">
+			<input type="hidden" name="returnUrl" value="">
+			<input type="hidden" name="activationReturnUrl" value="">
+			<input type="hidden" name="activationTemplate" value="">
+			<input type="hidden" name="source" value="WebForm">
+			<input type="hidden" name="notifyEmail" value="">
+			<div class="inputs">
+				<span id="email">
+	        <label for="email">Email
+	        </label>
+	        <input maxlength="40" class="form-control" name="email" size="20" type="email" required="">
+	      </span>
+				<span id="field_firstname">
+	        <label for="field_firstname">firstname
+	        </label>
+	        <input maxlength="40" class="form-control" name="field_firstname" size="20" type="string">
+	      </span>
+				<span id="field_lastname">
+	        <label for="field_lastname">lastname
+	        </label>
+	        <input maxlength="40" class="form-control" name="field_lastname" size="20" type="string">
+	      </span>
+				<span id="field_major">
+	        <label for="field_major">major
+	        </label>
+	        <input maxlength="40" class="form-control" name="field_major" size="20" type="string">
+	      </span>
+				<span id="field_year">
+	        <label for="field_year">year
+	        </label>
+	        <input maxlength="40" class="form-control" name="field_year" size="20" type="string">
+	      </span>
+				<span id="field_istransfer">
+	        <label for="istransfer">istransfer
+	        </label>
+	        <select name="istransfer">
+	          <option value="True">True
+	          </option>
+	          <option value="False">False
+	          </option>
+	        </select>
+	      </span>
+			</div>
+			<ul class="lists" style="list-style:none;display:none;">
+				<li>
+					<input type="checkbox" name="publiclistid" id="ovALHpgs" value="61d3ca08-280f-4604-8f90-abd0f1b4e761" checked="checked">
+					<label class="publiclistlabel" for="ovALHpgs">Test list
+	        </label>
+				</li>
+			</ul>
+			<input type="submit" name="submit" value="Subscribe" id="eesubmit">
+		</fieldset>
+	</form>
+
+</body>
+
+</html>
