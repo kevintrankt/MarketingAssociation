@@ -26,6 +26,18 @@
      flex-shrink: 0;
 }
 
+.inputs {
+     margin-right: 15px;
+}
+
+.inputheard {
+     width: 300px;
+}
+
+#field_heard {
+     width: 300px !important;
+}
+
 .demo-header .mdl-layout__header-row {
      padding-left: 40px;
 }
@@ -49,7 +61,6 @@
 .demo-content h3 {
      margin-top: 0px;
 }
-
 
 .demo-footer {
      padding-left: 40px;

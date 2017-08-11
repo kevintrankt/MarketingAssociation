@@ -36,6 +36,8 @@
 	<link rel="stylesheet" href="getmdl-select.min.css">
 	<script defer src="getmdl-select.min.js"></script>
 
+
+
 </head>
 
 <body>
@@ -76,43 +78,36 @@
 							<input type="hidden" name="source" value="WebForm">
 							<input type="hidden" name="notifyEmail" value="">
 							<div class="inputs">
-								<div id="field_firstname" class="mdl-textfield mdl-js-textfield">
+								<div id="field_firstname" class="mdl-textfield mdl-js-textfield inputs">
 									<label class="mdl-textfield__label" for="field_firstname">First Name</label>
 									<input class="mdl-textfield__input" maxlength="40" class="form-control" name="field_firstname" size="20" type="string" required="">
 								</div>
-								<div id="field_lastname" class="mdl-textfield mdl-js-textfield">
+								<div id="field_lastname" class="mdl-textfield mdl-js-textfield inputs">
 									<label class="mdl-textfield__label" for="field_lastname">Last Name</label>
 									<input class="mdl-textfield__input" maxlength="40" class="form-control" name="field_lastname" size="20" type="string" required="">
 								</div> <br />
-								<div id="email" class="mdl-textfield mdl-js-textfield">
+								<div id="email" class="mdl-textfield mdl-js-textfield inputs">
 									<label class="mdl-textfield__label" for="email">Email</label>
 									<input class="mdl-textfield__input" maxlength="40" class="form-control" name="email" size="20" type="email" required="">
-									<span class="mdl-textfield__error">Please enter a valid email address.</span>
 								</div>
-								<Br />
 
-								<!-- <div id="field_major" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-									<label class="mdl-textfield__label" for="field_major">Major</label>
-									<input class="mdl-textfield__input" id="field_major" maxlength="40" class="form-control" name="field_major" size="20" type="string" readonly tabIndex="-1">
-									<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="field_major">
-										<li class="mdl-menu__item" data-val="BLR">Belarus</li>
-										<li class="mdl-menu__item" data-val="RUS">Russia</li>
-									</ul>
-								</div> -->
-
-								<div id="field_major" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-									<input class="mdl-textfield__input" id="country" name="field_major" type="text" readonly tabIndex="-1" required="" />
+								<div id="field_major" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select inputs">
+									<input class="mdl-textfield__input readonly" id="country" name="field_major" type="text" readonly required/>
 									<label class="mdl-textfield__label" for="country">Major</label>
 									<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="country">
 										<li class="mdl-menu__item">Business</li>
 										<li class="mdl-menu__item">Engineering</li>
 									</ul>
 								</div>
+								<div id="concentration" class="mdl-textfield mdl-js-textfield inputs">
+									<label class="mdl-textfield__label" for="email">Concentration</label>
+									<input class="mdl-textfield__input" maxlength="40" class="form-control" name="concentration" size="20" type="email" required="">
+								</div>
 
 
 								<br />
-								<div id="field_year" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-									<input class="mdl-textfield__input" id="year" name="field_year" type="text" readonly tabIndex="-1" required="" />
+								<div id="field_year" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select inputs">
+									<input class="mdl-textfield__input" id="year" name="field_year" type="string" readonly required />
 									<label class="mdl-textfield__label" for="year">Year</label>
 									<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="year">
 										<li class="mdl-menu__item">Freshman</li>
@@ -123,14 +118,25 @@
 									</ul>
 								</div>
 
-								<div id="field_transfer" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-									<input class="mdl-textfield__input" id="tran" name="field_transfer" type="text" readonly tabIndex="-1" required="" />
+								<div id="field_transfer" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select inputs">
+									<input class="mdl-textfield__input" id="tran" name="field_transfer" type="string" readonly required />
 									<label class="mdl-textfield__label" for="tran">Transfer Student</label>
 									<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="tran">
 										<li class="mdl-menu__item">No</li>
 										<li class="mdl-menu__item">Yes</li>
 									</ul>
 								</div>
+
+								<div id="field_heard" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select inputs inputheard" style="width:300px;">
+									<input class="mdl-textfield__input" id="hear" name="field_heard" type="string" readonly tabIndex="-1" required="" />
+									<label class="mdl-textfield__label" for="hear">How Did You Hear About Us?</label>
+									<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="hear">
+										<li class="mdl-menu__item">No</li>
+										<li class="mdl-menu__item">Yes</li>
+									</ul>
+								</div>
+
+
 
 							</div>
 							<ul class="lists" style="list-style:none;display:none;">
@@ -140,7 +146,7 @@
 						   </label>
 								</li>
 							</ul>
-							<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit" name="submit" value="Subscribe" id="eesubmit">
+							<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" name="submit" value="Subscribe" id="eesubmit">
 						</fieldset>
 					</form>
 				</div>
