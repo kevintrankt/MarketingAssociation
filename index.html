@@ -73,21 +73,21 @@
 							<input type="hidden" name="source" value="WebForm">
 							<input type="hidden" name="notifyEmail" value="">
 							<div class="inputs">
-								<span id="email">
-						   <label for="email">Email
-						   </label>
-						   <input maxlength="40" class="form-control" name="email" size="20" type="email" required="">
-						 </span>
-								<span id="field_firstname">
-						   <label for="field_firstname">firstname
-						   </label>
-						   <input maxlength="40" class="form-control" name="field_firstname" size="20" type="string">
-						 </span>
-								<span id="field_lastname">
-						   <label for="field_lastname">lastname
-						   </label>
-						   <input maxlength="40" class="form-control" name="field_lastname" size="20" type="string">
-						 </span>
+								<div id="field_firstname" class="mdl-textfield mdl-js-textfield">
+									<label class="mdl-textfield__label" for="field_firstname">First Name</label>
+									<input class="mdl-textfield__input" maxlength="40" class="form-control" name="field_firstname" size="20" type="string">
+								</div>
+								<div id="field_lastname" class="mdl-textfield mdl-js-textfield">
+									<label class="mdl-textfield__label" for="field_lastname">Last Name</label>
+									<input class="mdl-textfield__input" maxlength="40" class="form-control" name="field_lastname" size="20" type="string">
+								</div> <br />
+								<div id="email" class="mdl-textfield mdl-js-textfield">
+									<label class="mdl-textfield__label" for="email">Email</label>
+									<input class="mdl-textfield__input" maxlength="40" class="form-control" name="email" size="20" type="email" required="">
+									<span class="mdl-textfield__error">Please enter a valid email address.</span>
+								</div>
+								<Br />
+
 								<span id="field_major">
 						   <label for="field_major">major
 						   </label>
