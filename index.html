@@ -61,11 +61,11 @@
 							<div class="inputs">
 								<div id="field_firstname" class="mdl-textfield mdl-js-textfield">
 									<label class="mdl-textfield__label" for="field_firstname">First Name</label>
-									<input class="mdl-textfield__input" maxlength="40" class="form-control" name="field_firstname" size="20" type="string">
+									<input class="mdl-textfield__input" maxlength="40" class="form-control" name="field_firstname" size="20" type="string" required="">
 								</div>
 								<div id="field_lastname" class="mdl-textfield mdl-js-textfield">
 									<label class="mdl-textfield__label" for="field_lastname">Last Name</label>
-									<input class="mdl-textfield__input" maxlength="40" class="form-control" name="field_lastname" size="20" type="string">
+									<input class="mdl-textfield__input" maxlength="40" class="form-control" name="field_lastname" size="20" type="string" required="">
 								</div> <br />
 								<div id="email" class="mdl-textfield mdl-js-textfield">
 									<label class="mdl-textfield__label" for="email">Email</label>
@@ -84,7 +84,7 @@
 								</div> -->
 
 								<div id="field_major" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-									<input class="mdl-textfield__input" id="country" name="field_major" type="text" readonly tabIndex="-1" />
+									<input class="mdl-textfield__input" id="country" name="field_major" type="text" readonly tabIndex="-1" required="" />
 									<label class="mdl-textfield__label" for="country">Major</label>
 									<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="country">
 										<li class="mdl-menu__item">Business</li>
@@ -92,31 +92,29 @@
 									</ul>
 								</div>
 
+
+								<br />
 								<div id="field_year" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-									<input class="mdl-textfield__input" id="year" name="field_year" type="text" readonly tabIndex="-1" />
+									<input class="mdl-textfield__input" id="year" name="field_year" type="text" readonly tabIndex="-1" required="" />
 									<label class="mdl-textfield__label" for="year">Year</label>
 									<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="year">
 										<li class="mdl-menu__item">Freshman</li>
 										<li class="mdl-menu__item">Sophomore</li>
 										<li class="mdl-menu__item">Junior</li>
-										<li class="mdl-menu__item">Senior (4+ Years)</li>
+										<li class="mdl-menu__item">Senior</li>
 										<li class="mdl-menu__item">Graduating Senior</li>
-
-
-
 									</ul>
 								</div>
 
-								<span id="field_istransfer">
-						   <label for="istransfer">istransfer
-						   </label>
-						   <select name="istransfer">
-							<option value="True">True
-							</option>
-							<option value="False">False
-							</option>
-						   </select>
-						 </span>
+								<div id="field_transfer" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+									<input class="mdl-textfield__input" id="tran" name="field_transfer" type="text" readonly tabIndex="-1" required="" />
+									<label class="mdl-textfield__label" for="tran">Transfer Student</label>
+									<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="tran">
+										<li class="mdl-menu__item">No</li>
+										<li class="mdl-menu__item">Yes</li>
+									</ul>
+								</div>
+
 							</div>
 							<ul class="lists" style="list-style:none;display:none;">
 								<li>
@@ -125,7 +123,7 @@
 						   </label>
 								</li>
 							</ul>
-							<input type="submit" name="submit" value="Subscribe" id="eesubmit">
+							<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit" name="submit" value="Subscribe" id="eesubmit">
 						</fieldset>
 					</form>
 				</div>
