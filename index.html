@@ -1,20 +1,4 @@
 <!doctype html>
-<!--
-  Material Design Lite
-  Copyright 2015 Google Inc. All rights reserved.
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License
--->
 <html lang="en">
 
 <head>
@@ -49,6 +33,8 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-red.min.css">
 	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="getmdl-select.min.css">
+	<script defer src="getmdl-select.min.js"></script>
 
 </head>
 
@@ -88,16 +74,39 @@
 								</div>
 								<Br />
 
-								<span id="field_major">
-						   <label for="field_major">major
-						   </label>
-						   <input maxlength="40" class="form-control" name="field_major" size="20" type="string">
-						 </span>
-								<span id="field_year">
-						   <label for="field_year">year
-						   </label>
-						   <input maxlength="40" class="form-control" name="field_year" size="20" type="string">
-						 </span>
+								<!-- <div id="field_major" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+									<label class="mdl-textfield__label" for="field_major">Major</label>
+									<input class="mdl-textfield__input" id="field_major" maxlength="40" class="form-control" name="field_major" size="20" type="string" readonly tabIndex="-1">
+									<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="field_major">
+										<li class="mdl-menu__item" data-val="BLR">Belarus</li>
+										<li class="mdl-menu__item" data-val="RUS">Russia</li>
+									</ul>
+								</div> -->
+
+								<div id="field_major" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+									<input class="mdl-textfield__input" id="country" name="field_major" type="text" readonly tabIndex="-1" />
+									<label class="mdl-textfield__label" for="country">Major</label>
+									<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="country">
+										<li class="mdl-menu__item">Business</li>
+										<li class="mdl-menu__item">Engineering</li>
+									</ul>
+								</div>
+
+								<div id="field_year" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+									<input class="mdl-textfield__input" id="year" name="field_year" type="text" readonly tabIndex="-1" />
+									<label class="mdl-textfield__label" for="year">Year</label>
+									<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="year">
+										<li class="mdl-menu__item">Freshman</li>
+										<li class="mdl-menu__item">Sophomore</li>
+										<li class="mdl-menu__item">Junior</li>
+										<li class="mdl-menu__item">Senior (4+ Years)</li>
+										<li class="mdl-menu__item">Graduating Senior</li>
+
+
+
+									</ul>
+								</div>
+
 								<span id="field_istransfer">
 						   <label for="istransfer">istransfer
 						   </label>
