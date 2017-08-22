@@ -61,11 +61,16 @@
 		 	   </label>
 		 	   <!-- <input maxlength="40" class="form-control" name="field_major" size="20" type="string"> -->
 		 	   <select name="field_major">
+				   <option disabled selected value> -- select an option -- </option>
+				   <option value="AppliedArts">Applied Sciences and Arts</option>
 		 				<option value="Business">Business</option>
+						<option value="Education">Education</option>
 		 				<option value="Engineering">Engineering</option>
-		 				<option value="Junior">Junior</option>
-		 			<option value="Senior">Senior</option>
-		 				<option value="Graduating Senior">Graduating Senior</option>
+						<option value="Humanities">Humanities and the Arts</option>
+						<option value="Internat">International and Extended Studies</option>
+						<option value="Science">Science</option>
+						<option value="SocScience">Social Sciences</option>
+
 		 		</select>
 		 	 </span>
 					</p>
@@ -81,6 +86,8 @@
 		 	   </label>
 		 	   <!-- <input maxlength="40" class="form-control" name="field_year" size="20" type="string"> -->
 		 	   <select name="field_year">
+				   <option disabled selected value> -- select an option -- </option>
+
 		 			<option value="Freshman">Freshman</option>
 		 			<option value="Sophomore">Sophomore</option>
 		 			<option value="Junior">Junior</option>
@@ -94,7 +101,13 @@
 		 	   <!-- <label for="field_transfer">Transfer Student
 		 	   </label> -->
 		 	   <!-- <input maxlength="40" class="form-control" name="field_transfer" size="20" type="string"> -->
-		 	   <label><input type="checkbox" class="form-control" name="field_stole" value="Yes">Would you like an MA stole?</label>
+		 	   <!-- <label><input type="checkbox" class="form-control" name="field_stole" value="Yes">Would you like an MA stole?</label> -->
+			   <label for="field_stole">Would you like an MA stole?</label>
+			   <!-- <input maxlength="40" class="form-control" name="field_tshirt" size="20" type="string"> -->
+			   <select name="field_stole">
+				   		<option value="No">No</option>
+						<option value="Yes">Yes (Graduating Seniors Only)</option>
+				</select>
 		 	 </span>
 					</p>
 					<p>
@@ -102,7 +115,13 @@
 		 	   <!-- <label for="field_transfer">Transfer Student
 		 	   </label> -->
 		 	   <!-- <input maxlength="40" class="form-control" name="field_transfer" size="20" type="string"> -->
-		 	   <input type="checkbox" class="form-control" name="field_transfer" value="Yes"> Transfer Student?
+		 	   <!-- <input type="checkbox" class="form-control" name="field_transfer" value="Yes"> Transfer Student? -->
+			   <label for="field_transfer">Transfer Student?</label>
+			   <!-- <input maxlength="40" class="form-control" name="field_tshirt" size="20" type="string"> -->
+			   <select name="field_transfer">
+				   		<option value="No">No</option>
+						<option value="Yes">Yes</option>
+				</select>
 		 	 </span>
 					</p>
 					<p>
@@ -114,10 +133,11 @@
 					</p>
 					<p>
 						<span id="field_tshirt">
-		 	   <label for="field_tshirt">T-shirt Size
-		 	   </label>
+		 	   <label for="field_tshirt">T-shirt Size</label>
 		 	   <!-- <input maxlength="40" class="form-control" name="field_tshirt" size="20" type="string"> -->
 		 	   <select name="field_tshirt">
+				   <option disabled selected value> -- select an option -- </option>
+
 		 				<option value="XS">X-Small</option>
 		 				<option value="S">Small</option>
 		 				<option value="M">Medium</option>
