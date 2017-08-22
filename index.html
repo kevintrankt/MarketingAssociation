@@ -1,160 +1,187 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="Marketing Association's General Member Signup Form">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-	<title>Marketing Association Sign Up</title>
-
-	<!-- Add to homescreen for Chrome on Android -->
-	<meta name="mobile-web-app-capable" content="yes">
-	<link rel="icon" sizes="192x192" href="images/android-desktop.png">
-
-	<!-- Add to homescreen for Safari on iOS -->
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="apple-mobile-web-app-title" content="Material Design Lite">
-	<link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
-
-	<!-- Tile icon for Win8 (144x144 + tile color) -->
-	<meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-	<meta name="msapplication-TileColor" content="#3372DF">
-
-	<link rel="shortcut icon" href="images/favicon.png">
-
-	<!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-	<!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
-
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-red.min.css">
-	<link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="getmdl-select.min.css">
-	<script defer src="getmdl-select.min.js"></script>
-
-
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Join Marketing Association</title>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
-
-		<div class="demo-ribbon"></div>
-		<main class="demo-main mdl-layout__content">
-			<div class="demo-container mdl-grid">
-				<div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-				<div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
-
-					<h3>Marketing Association Sign Up Form</h3>
-
+	<div class="container">
+		<h1 class="brand"><span>Join</span> Marketing Association</h1>
+		<div class="wrapper animated bounceInLeft">
+			<div class="company-info">
+				<h3>Marketing Association</h3>
+				<p>
+					Lorem ipsum dolor sit amet, has aperiam consulatu moderatius no, in assum aliquam per, decore omittam ea has. In vel omnium inciderint, vix labore sententiae ei, ex quot iriure eripuit per
+				</p>
+				<ul>
+					<li><i class="fa fa-road"></i> 44 Something st</li>
+					<li><i class="fa fa-phone"></i> (555) 555-5555</li>
+					<li><i class="fa fa-envelope"></i> test@acme.test</li>
+				</ul>
+			</div>
+			<div class="contact">
+				<h3>Join Today!</h3>
+				<form action="https://api.elasticemail.com/contact/add?version=2" method="post" id="ewf_subscriptionForm">
+					<!-- <fieldset style="border:none;"> -->
+					<input type="hidden" name="publicaccountid" value="453cc5c0-2a57-4c18-a663-b41a0ce546ca">
+					<input type="hidden" name="returnUrl" value="http://sjsumarketing.org/">
+					<input type="hidden" name="activationReturnUrl" value="https://www.facebook.com/sjsumarketing/">
+					<input type="hidden" name="activationTemplate" value="">
+					<input type="hidden" name="source" value="WebForm">
+					<input type="hidden" name="notifyEmail" value="">
+					<script id="recaptchaScript" src="https://www.google.com/recaptcha/api.js?onload=grecaptchaready&amp;render=explicit" async="" defer="">
+					</script>
+					<!-- <div class="inputs"> -->
 					<p>
-						Lorem ipsum dolor sit amet, has aperiam consulatu moderatius no, in assum aliquam per, decore omittam ea has. In vel omnium inciderint, vix labore sententiae ei, ex quot iriure eripuit per. In inermis molestie sed. Mutat exerci facete qui in, sensibus
-						oportere abhorreant te eos, at ius omnis atqui eligendi. Per te assum tollit.
+						<label for="field_firstname">First Name</label>
+						<input class="form-control" name="field_firstname" type="string" required>
+					</p>
+					<p>
+						<label for="field_lastname">Last Name</label>
+						<input class="form-control" name="field_lastname" type="string" required>
+					</p>
+					<p>
 
-						<div class="dates">
+						<span id="email">
+		 <label for="email">Email
+		 </label>
+		 <input maxlength="40" class="form-control" name="email" size="20" type="email" required="">
+		 </span>
+					</p>
+					<p>
+						<span id="field_major">
+		 	   <label for="field_major">Major
+		 	   </label>
+		 	   <!-- <input maxlength="40" class="form-control" name="field_major" size="20" type="string"> -->
+		 	   <select name="field_major" required>
+				   <option disabled selected value> -- select an option -- </option>
+				   <option value="AppliedArts">Applied Sciences and Arts</option>
+		 				<option value="Business">Business</option>
+						<option value="Education">Education</option>
+		 				<option value="Engineering">Engineering</option>
+						<option value="Humanities">Humanities and the Arts</option>
+						<option value="Internat">International and Extended Studies</option>
+						<option value="Science">Science</option>
+						<option value="SocScience">Social Sciences</option>
 
+		 		</select>
+		 	 </span>
+					</p>
+					<p>
+						<span id="field_concentration">
+		 	   <label for="field_concentration">Concentration
+		 	   </label>
+		 	   <input maxlength="40" class="form-control" name="field_concentration" size="20" type="string" required></span>
+					</p>
+					<p>
+						<span id="field_year">
+		 	   <label for="field_year">Year
+		 	   </label>
+		 	   <!-- <input maxlength="40" class="form-control" name="field_year" size="20" type="string"> -->
+		 	   <select name="field_year" required>
+				   <option disabled selected value> -- select an option -- </option>
 
-							<ul>
-								<li>
-									<strong>5/31 Kick Off</strong>
-								</li>
-								<li>
-									5/31 Kick Off
-								</li>
-							</ul>
-						</div>
+		 			<option value="Freshman">Freshman</option>
+		 			<option value="Sophomore">Sophomore</option>
+		 			<option value="Junior">Junior</option>
+		 			<option value="Senior">Senior</option>
+		 			<option value="Graduating Senior">Graduating Senior</option>
+		 		</select>
+		 	 </span>
+					</p>
+					<p>
+						<span id="field_stole">
+		 	   <!-- <label for="field_transfer">Transfer Student
+		 	   </label> -->
+		 	   <!-- <input maxlength="40" class="form-control" name="field_transfer" size="20" type="string"> -->
+		 	   <!-- <label><input type="checkbox" class="form-control" name="field_stole" value="Yes">Would you like an MA stole?</label> -->
+			   <label for="field_stole">Would you like an MA stole?</label>
+			   <!-- <input maxlength="40" class="form-control" name="field_tshirt" size="20" type="string"> -->
+			   <select name="field_stole">
+				   		<option value="No">No</option>
+						<option value="Yes">Yes (Graduating Seniors Only)</option>
+				</select>
+		 	 </span>
+					</p>
+					<p>
+						<span id="field_transfer">
+		 	   <!-- <label for="field_transfer">Transfer Student
+		 	   </label> -->
+		 	   <!-- <input maxlength="40" class="form-control" name="field_transfer" size="20" type="string"> -->
+		 	   <!-- <input type="checkbox" class="form-control" name="field_transfer" value="Yes"> Transfer Student? -->
+			   <label for="field_transfer">Transfer Student?</label>
+			   <!-- <input maxlength="40" class="form-control" name="field_tshirt" size="20" type="string"> -->
+			   <select name="field_transfer">
+				   		<option value="No">No</option>
+						<option value="Yes">Yes</option>
+				</select>
+		 	 </span>
+					</p>
+					<p>
+						<span id="field_heard">
+		 	   <label for="field_heard">How did you hear about us?
+		 	   </label>
+		 	   <input maxlength="40" class="form-control" name="field_heard" size="20" type="string">
+		 	 </span>
+					</p>
+					<p>
+						<span id="field_tshirt">
+		 	   <label for="field_tshirt">T-shirt Size</label>
+		 	   <!-- <input maxlength="40" class="form-control" name="field_tshirt" size="20" type="string"> -->
+		 	   <select name="field_tshirt" required>
+				   <option disabled selected value> -- select an option -- </option>
+
+		 				<option value="XS">X-Small</option>
+		 				<option value="S">Small</option>
+		 				<option value="M">Medium</option>
+		 				<option value="L">Large</option>
+		 				<option value="XL">X-Large</option>
+		 		</select>
+		 	 </span>
 					</p>
 
-					<form action="https://api.elasticemail.com/contact/add?version=2" method="post" id="ewf_subscriptionForm">
-						<fieldset style="border:none;">
-							<input type="hidden" name="publicaccountid" value="453cc5c0-2a57-4c18-a663-b41a0ce546ca">
-							<input type="hidden" name="returnUrl" value="">
-							<input type="hidden" name="activationReturnUrl" value="">
-							<input type="hidden" name="activationTemplate" value="">
-							<input type="hidden" name="source" value="WebForm">
-							<input type="hidden" name="notifyEmail" value="">
-							<div class="inputs">
-								<div id="field_firstname" class="mdl-textfield mdl-js-textfield inputs ">
-									<label class="mdl-textfield__label" for="field_firstname">First Name</label>
-									<input class="mdl-textfield__input" maxlength="40" class="form-control" name="field_firstname" size="20" type="string" required="">
+
+					<ul class="lists" style="list-style:none;display:none;">
+						<li>
+							<input type="checkbox" name="publiclistid" id="FRHTIinv" value="dd880220-2b64-47ea-9813-fecba9454f23" checked="checked">
+							<label class="publiclistlabel" for="FRHTIinv">Fall 2017
+		 	   </label>
+						</li>
+					</ul>
+					<p>
+						<div id="captcha" class="full">
+							<div class="text-center">
+								<div id="webformcaptcha">
 								</div>
-								<div id="field_lastname" class="mdl-textfield mdl-js-textfield inputs">
-									<label class="mdl-textfield__label" for="field_lastname">Last Name</label>
-									<input class="mdl-textfield__input" maxlength="40" class="form-control" name="field_lastname" size="20" type="string" required="">
-								</div> <br />
-								<div id="email" class="mdl-textfield mdl-js-textfield inputs">
-									<label class="mdl-textfield__label" for="email">Email</label>
-									<input class="mdl-textfield__input" maxlength="40" class="form-control" name="email" size="20" type="email" required="">
-								</div>
-
-								<div id="field_major" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select inputs">
-									<input class="mdl-textfield__input readonly" id="country" name="field_major" type="text" readonly required/>
-									<label class="mdl-textfield__label" for="country">Major</label>
-									<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="country">
-										<li class="mdl-menu__item">Business</li>
-										<li class="mdl-menu__item">Engineering</li>
-									</ul>
-								</div>
-								<div id="concentration" class="mdl-textfield mdl-js-textfield inputs">
-									<label class="mdl-textfield__label" for="email">Concentration</label>
-									<input class="mdl-textfield__input" maxlength="40" class="form-control" name="concentration" size="20">
-								</div>
-
-
-								<br />
-								<div id="field_year" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select inputs">
-									<input class="mdl-textfield__input" id="year" name="field_year" type="string" readonly required />
-									<label class="mdl-textfield__label" for="year">Year</label>
-									<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="year">
-										<li class="mdl-menu__item">Freshman</li>
-										<li class="mdl-menu__item">Sophomore</li>
-										<li class="mdl-menu__item">Junior</li>
-										<li class="mdl-menu__item">Senior</li>
-										<li class="mdl-menu__item">Graduating Senior</li>
-									</ul>
-								</div>
-
-								<div id="field_transfer" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select inputs">
-									<input class="mdl-textfield__input" id="tran" name="field_transfer" type="string" readonly required />
-									<label class="mdl-textfield__label" for="tran">Transfer Student</label>
-									<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="tran">
-										<li class="mdl-menu__item">No</li>
-										<li class="mdl-menu__item">Yes</li>
-									</ul>
-								</div>
-
-								<div id="field_heard" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select inputs inputheard" style="width:300px;">
-									<input class="mdl-textfield__input" id="hear" name="field_heard" type="string" readonly tabIndex="-1" required="" />
-									<label class="mdl-textfield__label" for="hear">How Did You Hear About Us?</label>
-									<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="hear">
-										<li class="mdl-menu__item">No</li>
-										<li class="mdl-menu__item">Yes</li>
-									</ul>
-								</div>
-
-
-
 							</div>
-							<ul class="lists" style="list-style:none;display:none;">
-								<li>
-									<input type="checkbox" name="publiclistid" id="ovALHpgs" value="61d3ca08-280f-4604-8f90-abd0f1b4e761" checked="checked">
-									<label class="publiclistlabel" for="ovALHpgs">Fall 2017
-						   </label>
-								</li>
-							</ul>
-							<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" name="submit" value="Subscribe" id="eesubmit">
-						</fieldset>
-					</form>
-				</div>
+							<script type="text/javascript">
+								var grecaptchaready = function() {
+									var eewebformsubmit = document.getElementById("eesubmit");
+									grecaptcha.render('webformcaptcha', {
+										'sitekey': '6Lca-iUUAAAAAAQ6T6vYEAp3YybZWpeKUXRJ5E8S',
+										'callback': function(response) {
+											eewebformsubmit.disabled = false;
+										}
+									});
+								}
+							</script>
+						</div>
+					</p>
+					<p class="full">
+						<input type="submit" name="submit" value="Subscribe" id="eesubmit" disabled="">
+					</p>
+					<!-- </fieldset> -->
+				</form>
 			</div>
-
-		</main>
+		</div>
 	</div>
-	<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </body>
 
 </html>
