@@ -18,7 +18,7 @@
 			<div class="company-info">
 				<img src="http://sjsumarketing.org/wp-content/uploads/2016/01/MA-Final-Logo.png" alt="Marketing Association SJSU" style="width: 100%">
 				<p>
-					Please check into our event! This will help us track how well we're doing as well as determine who the most active users are! 
+					Please check into our event! This will help us track how well we're doing as well as determine who the most active users are!
 				</p>
 				<img src="schedule.png" style="width:100%;" />
 			</div>
@@ -32,14 +32,36 @@
 					<input type="hidden" name="source" value="WebForm">
 					<input type="hidden" name="notifyEmail" value="">
 					<!-- <div class="inputs"> -->
-					<h1>Check In</h1>
-					<p class="full">
-
+					<h1 class = "full">Check In: Kick Off Event</h1>
+					<p>
+						<label for="field_firstname">First Name</label>
+						<input class="form-control" name="field_firstname" type="string" required>
+					</p>
+					<p>
+						<label for="field_lastname">Last Name</label>
+						<input class="form-control" name="field_lastname" type="string" required>
+					</p>
+					<p>
 						<span id="email">
 		 <label for="email">Email
 		 </label>
 		 <input maxlength="40" class="form-control" name="email" size="20" type="email" required="">
 		 </span>
+					</p>
+
+					<p>
+						<span id="field_stole">
+				 <!-- <label for="field_transfer">Transfer Student
+				 </label> -->
+				 <!-- <input maxlength="40" class="form-control" name="field_transfer" size="20" type="string"> -->
+				 <!-- <label><input type="checkbox" class="form-control" name="field_stole" value="Yes">Would you like an MA stole?</label> -->
+				 <label for="field_stole">Extra Credit?</label>
+				 <!-- <input maxlength="40" class="form-control" name="field_tshirt" size="20" type="string"> -->
+				 <select name="field_stole">
+							<option value="No">No</option>
+						<option value="Yes">Yes</option>
+				</select>
+			 </span>
 					</p>
 
 
