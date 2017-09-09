@@ -14,8 +14,6 @@
 <body>
 	<div class="container">
 		<!-- <h1 class="brand"><span>Join</span> Marketing Association</h1> -->
-		<div class="wrapper animated bounceInLeft">
-			<div class="company-info">
 				<form action="https://api.elasticemail.com/contact/add?version=2" method="post" id="ewf_subscriptionForm">
 					<!-- <fieldset style="border:none;"> -->
 					<input type="hidden" name="publicaccountid" value="453cc5c0-2a57-4c18-a663-b41a0ce546ca">
@@ -25,11 +23,11 @@
 					<input type="hidden" name="source" value="WebForm">
 					<input type="hidden" name="notifyEmail" value="">
 					<!-- <div class="inputs"> -->
-					<h1 class="full">Check In: Kick Off Event</h1>
+					<h1 class="full">Check In: Google Event</h1>
 
 					<p>
 						<span id="email">
-		 <label for="email">Email (What you used to join)
+		 <label for="email">Email
 		 </label>
 		 <input maxlength="40" class="form-control" name="email" size="20" type="email" required="">
 		 </span>
@@ -57,37 +55,34 @@
 					<p>
 					</p>
 					<p class="full">
-						<input type="submit" name="submit" value="Check In!" id="eesubmit">
+						<input type="submit" name="submit" value="Pay" id="eesubmit">
 					</p>
 					<!-- </fieldset> -->
 				</form>
-			</div>
-			<div class="contact">
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.2.8/d3.min.js"></script>
 
-				<script type="text/javascript" charset="utf-8">
-					d3.text("data.csv", function(data) {
-						var parsedCSV = d3.csv.parseRows(data);
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.2.8/d3.min.js"></script>
 
-						var container = d3.select("body")
-							.append("table")
+			<script type="text/javascript" charset="utf-8">
+				d3.text("data.csv", function(data) {
+					var parsedCSV = d3.csv.parseRows(data);
 
-							.selectAll("tr")
-							.data(parsedCSV).enter()
-							.append("tr")
+					var container = d3.select("body")
+						.append("table")
 
-							.selectAll("td")
-							.data(function(d) {
-								return d;
-							}).enter()
-							.append("td")
-							.text(function(d) {
-								return d;
-							});
-					});
-				</script>
-			</div>
-		</div>
+						.selectAll("tr")
+						.data(parsedCSV).enter()
+						.append("tr")
+
+						.selectAll("td")
+						.data(function(d) {
+							return d;
+						}).enter()
+						.append("td")
+						.text(function(d) {
+							return d;
+						});
+				});
+			</script>
 	</div>
 </body>
 
