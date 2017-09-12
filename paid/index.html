@@ -13,21 +13,33 @@
 
 <body>
 	<div class="container">
+		<!-- <h1 class="brand"><span>Join</span> Marketing Association</h1> -->
 		<div class="wrapper animated bounceInLeft">
 			<div class="company-info">
+				<h1 class="full">Check In: Google Event</h1>
+
 				<form action="https://api.elasticemail.com/contact/add?version=2" method="post" id="ewf_subscriptionForm">
+					<!-- <fieldset style="border:none;"> -->
 					<input type="hidden" name="publicaccountid" value="453cc5c0-2a57-4c18-a663-b41a0ce546ca">
 					<input type="hidden" name="returnUrl" value="http://www.kevintrankt.com/MarketingAssociation/paid">
 					<input type="hidden" name="activationReturnUrl" value="">
 					<input type="hidden" name="activationTemplate" value="">
 					<input type="hidden" name="source" value="WebForm">
 					<input type="hidden" name="notifyEmail" value="">
-					<h1 class="full">Check In: Google Event</h1>
+					<!-- <div class="inputs"> -->
+					<h3 class="full">Pay & Check In</h3>
 
-					<p class = "full">
-						<label for="email">Email</label>
-						<input maxlength="40" class="form-control" name="email" size="20" type="email" required="">
-					</p>
+
+					<label for="email">Add to Paid (Email)</label><br>
+					<input style="width:100%" maxlength="40" class="form-control" name="email" size="20" type="email" required="">
+					<span id="field_ec_event2">
+				 <label for="field_ec_event2">Extra Credit?</label>
+				 <select name="field_ec_event2">
+							<option value="No">No</option>
+						<option value="Yes">Yes</option>
+				</select>
+			 </span>
+
 
 					<ul class="lists" style="list-style:none;display:none;">
 						<li>
@@ -35,12 +47,20 @@
 							<label class="publiclistlabel" for="drBpkUqw">Fall 2017 - Paid
 					        </label>
 						</li>
+
+						<li>
+							<input type="checkbox" name="publiclistid" id="EAgAUiFP" value="622b6fe7-340b-46dd-89c0-90667ba38c7d" checked="checked">
+							<label class="publiclistlabel" for="EAgAUiFP">Event 2: Google</label>
+						</li>
+
 					</ul>
 
-					<p class="full">
-						<input type="submit" name="submit" value="Pay" id="eesubmit">
-					</p>
+					<br>
+					<input type="submit" name="submit" value="Pay & Check In" id="eesubmit">
+					<!-- </fieldset> -->
 				</form>
+				<br><br>
+
 			</div>
 			<div class="contact">
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.2.8/d3.min.js"></script>
