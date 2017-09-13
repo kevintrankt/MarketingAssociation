@@ -30,10 +30,17 @@
 					<input type="hidden" name="notifyEmail" value="">
 					<!-- <div class="inputs"> -->
 					<h3 class="full">Pay & Check In</h3>
-
+					<p>
+						<label for="field_firstname">First Name</label>
+						<input class="form-control" name="field_firstname" type="string">
+					</p>
+					<p>
+						<label for="field_lastname">Last Name</label>
+						<input class="form-control" name="field_lastname" type="string">
+					</p>
 
 					<label for="email">Add to Paid (Email)</label><br>
-					<input id = "emailForm" style="width:100%" maxlength="40" class="form-control" name="email" size="20" type="email" required="">
+					<input id="emailForm" style="width:100%" maxlength="40" class="form-control" name="email" size="20" type="email" required="">
 					<span id="field_ec_event2">
 				 <label for="field_ec_event2">Extra Credit?</label>
 				 <select name="field_ec_event2">
@@ -89,11 +96,11 @@
 					});
 				</script>
 				<script>
-				var script = $('body').attr("onclick")
-				$('body').on('click','td', function(event) {
-				        console.log(event['target'].textContent);
-								$("#emailForm").val(event['target'].textContent);
-				    });
+					var script = $('body').attr("onclick")
+					$('body').on('click', 'td', function(event) {
+						console.log(event['target'].textContent);
+						$("#emailForm").val(event['target'].textContent);
+					});
 				</script>
 			</div>
 		</div>
