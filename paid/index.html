@@ -5,10 +5,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Join Marketing Association</title>
+	<title>Check In</title>
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
 	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -18,7 +20,7 @@
 			<div class="company-info">
 				<h1 class="full">Check In: Google Event</h1>
 
-				<form action="https://api.elasticemail.com/contact/add?version=2" method="post" id="ewf_subscriptionForm">
+				<form action="https://api.elasticemail.com/contact/add?version=2" method="post" id="ewf_subscriptionForm" style="position: fixed">
 					<!-- <fieldset style="border:none;"> -->
 					<input type="hidden" name="publicaccountid" value="453cc5c0-2a57-4c18-a663-b41a0ce546ca">
 					<input type="hidden" name="returnUrl" value="http://www.kevintrankt.com/MarketingAssociation/paid">
@@ -29,16 +31,9 @@
 					<!-- <div class="inputs"> -->
 					<h3 class="full">Pay & Check In</h3>
 
-					<p>
-						<label for="field_firstname">First Name</label>
-						<input class="form-control" name="field_firstname" type="string">
-					</p>
-					<p>
-						<label for="field_lastname">Last Name</label>
-						<input class="form-control" name="field_lastname" type="string">
-					</p>
-					<label for="email">Email</label><br>
-					<input style="width:100%" maxlength="40" class="form-control" name="email" size="20" type="email" required="">
+
+					<label for="email">Add to Paid (Email)</label><br>
+					<input id = "emailForm" style="width:100%" maxlength="40" class="form-control" name="email" size="20" type="email" required="">
 					<span id="field_ec_event2">
 				 <label for="field_ec_event2">Extra Credit?</label>
 				 <select name="field_ec_event2">
@@ -92,6 +87,13 @@
 								return d;
 							});
 					});
+				</script>
+				<script>
+				var script = $('body').attr("onclick")
+				$('body').on('click','td', function(event) {
+				        console.log(event['target'].textContent);
+								$("#emailForm").val(event['target'].textContent);
+				    });
 				</script>
 			</div>
 		</div>
