@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Join Marketing Association</title>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="container">
+		<!-- <h1 class="brand"><span>Join</span> Marketing Association</h1> -->
+		<div class="wrapper animated bounceInLeft">
+			<div class="company-info">
+				<img src="http://sjsumarketing.org/wp-content/uploads/2016/01/MA-Final-Logo.png" alt="Marketing Association SJSU" style="width: 100%">
+				<p>
+					Please check into our event! This will help us track how well we're doing as well as determine who the most active users are!
+				</p>
+				<img src="schedule.png" style="width:100%;" />
+			</div>
+			<div class="contact">
+				<form action="https://api.elasticemail.com/contact/add?version=2" method="post" id="ewf_subscriptionForm">
+					<!-- <fieldset style="border:none;"> -->
+					<input type="hidden" name="publicaccountid" value="453cc5c0-2a57-4c18-a663-b41a0ce546ca">
+					<input type="hidden" name="returnUrl" value="http://sjsumarketing.org/0ynyihqcun4h/">
+					<input type="hidden" name="activationReturnUrl" value="http://www.kevintrankt.com/MarketingAssociation/confirm/">
+					<input type="hidden" name="activationTemplate" value="">
+					<input type="hidden" name="source" value="WebForm">
+					<input type="hidden" name="notifyEmail" value="">
+					<!-- <div class="inputs"> -->
+					<h1 class = "full">Check In: Kick Off Event</h1>
+
+					<p>
+						<span id="email">
+		 <label for="email">Email (What you used to join)
+		 </label>
+		 <input maxlength="40" class="form-control" name="email" size="20" type="email" required="">
+		 </span>
+					</p>
+
+					<p>
+						<span id="field_ec_event1">
+				 <!-- <label for="field_transfer">Transfer Student
+				 </label> -->
+				 <!-- <input maxlength="40" class="form-control" name="field_transfer" size="20" type="string"> -->
+				 <!-- <label><input type="checkbox" class="form-control" name="field_stole" value="Yes">Would you like an MA stole?</label> -->
+				 <label for="field_ec_event1">Extra Credit?</label>
+				 <!-- <input maxlength="40" class="form-control" name="field_tshirt" size="20" type="string"> -->
+				 <select name="field_ec_event1">
+							<option value="No">No</option>
+						<option value="Yes">Yes</option>
+				</select>
+			 </span>
+					</p>
+
+
+					<ul class="lists" style="list-style:none;display:none;">
+						<li>
+							<input type="checkbox" name="publiclistid" id="BVagpOgC" value="d348eadf-f14b-444c-b4b4-1b48137539ee" checked="checked">
+							<label class="publiclistlabel" for="BVagpOgC">Event 1: Kick Off
+			        </label>
+						</li>
+					</ul>
+					<p>
+					</p>
+					<p class="full">
+						<input type="submit" name="submit" value="Check In!" id="eesubmit">
+					</p>
+					<!-- </fieldset> -->
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

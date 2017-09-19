@@ -5,12 +5,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Check In</title>
+	<title>PAY</title>
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
 	<link rel="stylesheet" href="style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 </head>
 
 <body>
@@ -18,96 +16,168 @@
 		<!-- <h1 class="brand"><span>Join</span> Marketing Association</h1> -->
 		<div class="wrapper animated bounceInLeft">
 			<div class="company-info">
-				<h1 class="full">Check In: Beach</h1>
-
-				<form action="https://api.elasticemail.com/contact/add?version=2" method="post" id="ewf_subscriptionForm" style="position: fixed">
+				<img src="http://sjsumarketing.org/wp-content/uploads/2016/01/MA-Final-Logo.png" alt="Marketing Association SJSU" style="width: 100%">
+				<p>
+Form to add paid members
+				</p>
+				<img src="schedule.png" style = "width:100%;"/>
+			</div>
+			<div class="contact">
+				<form action="https://api.elasticemail.com/contact/add?version=2" method="post" id="ewf_subscriptionForm">
 					<!-- <fieldset style="border:none;"> -->
 					<input type="hidden" name="publicaccountid" value="453cc5c0-2a57-4c18-a663-b41a0ce546ca">
-					<input type="hidden" name="returnUrl" value="http://www.kevintrankt.com/MarketingAssociation/paid">
-					<input type="hidden" name="activationReturnUrl" value="">
+					<input type="hidden" name="returnUrl" value="http://www.kevintrankt.com/MarketingAssociation/confirm/">
+					<input type="hidden" name="activationReturnUrl" value="http://www.kevintrankt.com/MarketingAssociation/done/">
 					<input type="hidden" name="activationTemplate" value="">
 					<input type="hidden" name="source" value="WebForm">
 					<input type="hidden" name="notifyEmail" value="">
 					<!-- <div class="inputs"> -->
-					<h3 class="full">Pay & Check In</h3>
 					<p>
 						<label for="field_firstname">First Name</label>
-						<input class="form-control" name="field_firstname" type="string">
+						<input class="form-control" name="field_firstname" type="string" required>
 					</p>
 					<p>
 						<label for="field_lastname">Last Name</label>
-						<input class="form-control" name="field_lastname" type="string">
+						<input class="form-control" name="field_lastname" type="string" required>
 					</p>
+					<p>
 
-					<label for="email">Email</label><br>
-					<input id="emailForm" style="width:100%" maxlength="40" class="form-control" name="email" size="20" type="email" required="">
-					<span id="field_ec_event2">
-				 <label for="field_ec_event2">Extra Credit?</label>
-				 <select name="field_ec_event2">
-							<option value="No">No</option>
+						<span id="email">
+		 <label for="email">Email
+		 </label>
+		 <input maxlength="40" class="form-control" name="email" size="20" type="email" required="">
+		 </span>
+					</p>
+					<p>
+						<span id="field_major">
+		 	   <label for="field_major">Major
+		 	   </label>
+		 	   <!-- <input maxlength="40" class="form-control" name="field_major" size="20" type="string"> -->
+		 	   <select name="field_major" required>
+				   <option disabled selected value> -- select an option -- </option>
+				   <option value="AppliedArts">Applied Sciences and Arts</option>
+		 				<option value="Business">Business</option>
+						<option value="Education">Education</option>
+		 				<option value="Engineering">Engineering</option>
+						<option value="Humanities">Humanities and the Arts</option>
+						<option value="Internat">International and Extended Studies</option>
+						<option value="Science">Science</option>
+						<option value="SocScience">Social Sciences</option>
+
+		 		</select>
+		 	 </span>
+					</p>
+					<p>
+						<span id="field_concentration">
+		 	   <label for="field_concentration">Concentration
+		 	   </label>
+		 	   <input maxlength="40" class="form-control" name="field_concentration" size="20" type="string" required></span>
+					</p>
+					<p>
+						<span id="field_year">
+		 	   <label for="field_year">Year
+		 	   </label>
+		 	   <!-- <input maxlength="40" class="form-control" name="field_year" size="20" type="string"> -->
+		 	   <select name="field_year" required>
+				   <option disabled selected value> -- select an option -- </option>
+
+		 			<option value="Freshman">Freshman</option>
+		 			<option value="Sophomore">Sophomore</option>
+		 			<option value="Junior">Junior</option>
+		 			<option value="Senior">Senior</option>
+		 			<option value="Graduating Senior">Graduating Senior</option>
+		 		</select>
+		 	 </span>
+					</p>
+					<p>
+						<span id="field_stole">
+		 	   <!-- <label for="field_transfer">Transfer Student
+		 	   </label> -->
+		 	   <!-- <input maxlength="40" class="form-control" name="field_transfer" size="20" type="string"> -->
+		 	   <!-- <label><input type="checkbox" class="form-control" name="field_stole" value="Yes">Would you like an MA stole?</label> -->
+			   <label for="field_stole">Graduation Stole?</label>
+			   <!-- <input maxlength="40" class="form-control" name="field_tshirt" size="20" type="string"> -->
+			   <select name="field_stole">
+				   		<option value="No">No</option>
+						<option value="Yes">Yes (Graduating Seniors Only)</option>
+				</select>
+		 	 </span>
+					</p>
+					<p>
+						<span id="field_transfer">
+		 	   <!-- <label for="field_transfer">Transfer Student
+		 	   </label> -->
+		 	   <!-- <input maxlength="40" class="form-control" name="field_transfer" size="20" type="string"> -->
+		 	   <!-- <input type="checkbox" class="form-control" name="field_transfer" value="Yes"> Transfer Student? -->
+			   <label for="field_transfer">Transfer Student?</label>
+			   <!-- <input maxlength="40" class="form-control" name="field_tshirt" size="20" type="string"> -->
+			   <select name="field_transfer">
+				   		<option value="No">No</option>
 						<option value="Yes">Yes</option>
 				</select>
+		 	 </span>
+					</p>
+					<p>
+						<span id="field_heard">
+		 	   <label for="field_heard">How did you hear about us?
+		 	   </label>
+		 	   <!-- <input maxlength="40" class="form-control" name="field_heard" size="20" type="string"> -->
+			   <select name="field_heard" required>
+				   <option disabled selected value> -- select an option -- </option>
+						<option value="tabling">Tabling</option>
+						<option value="facebook">Facebook</option>
+						<option value="instagram">Instagram</option>
+						<option value="friend">Friend Referral</option>
+						<option value="bulletin">Bulletin Board</option>
+						<option value="extracredit">Extra Credit</option>
+						<option value="extracredit">Other</option>
 
-				<p>
-					<label for="field_ec2_professor">Professor Name</label>
-					<input class="form-control" name="field_ec2_professor" type="string">
-				</p>
-			 </span>
+				</select>
+		 	 </span>
+					</p>
+					<p>
+						<span id="field_tshirt">
+		 	   <label for="field_tshirt">T-shirt Size</label>
+		 	   <!-- <input maxlength="40" class="form-control" name="field_tshirt" size="20" type="string"> -->
+		 	   <select name="field_tshirt" required>
+				   <option disabled selected value> -- select an option -- </option>
+
+		 				<option value="XS">X-Small</option>
+		 				<option value="S">Small</option>
+		 				<option value="M">Medium</option>
+		 				<option value="L">Large</option>
+		 				<option value="XL">X-Large</option>
+		 		</select>
+		 	 </span>
+					</p>
+
+					<p>
+						<span id="field_refer">
+			   <label for="field_concentration">Referred By (Optional)
+			   </label>
+			   <input maxlength="40" class="form-control" name="field_refer" size="20" type="string"></span>
+					</p>
 
 
 					<ul class="lists" style="list-style:none;display:none;">
 						<li>
-							<input type="checkbox" name="publiclistid" id="drBpkUqw" value="b7866ca3-f433-4a02-9cf1-474214c7e11b" checked="checked">
-							<label class="publiclistlabel" for="drBpkUqw">Fall 2017 - Paid
-					        </label>
+							<input type="checkbox" name="publiclistid" id="piwtAlCO" value="dd880220-2b64-47ea-9813-fecba9454f23" checked="checked">
+							<label class="publiclistlabel" for="piwtAlCO">Fall 2017
+				         </label>
 						</li>
-
 						<li>
-			        <input type="checkbox" name="publiclistid" id="DxpsSMlO" value="2503d7f2-e416-445f-8b46-d8d33f02d5ee" checked="checked">
-			        <label class="publiclistlabel" for="DxpsSMlO">Event 3: Beach Cleanup
-			        </label>
-			      </li>
-
+	<input type="checkbox" name="publiclistid" id="drBpkUqw" value="b7866ca3-f433-4a02-9cf1-474214c7e11b" checked="checked">
+	<label class="publiclistlabel" for="drBpkUqw">Fall 2017 - Paid
+			</label>
+</li>
 					</ul>
-
-					<br>
-					<input type="submit" name="submit" value="Pay & Check In" id="eesubmit">
+					<p>
+					</p>
+					<p class="full">
+						<input type="submit" name="submit" value="Add to Paid" id="eesubmit">
+					</p>
 					<!-- </fieldset> -->
 				</form>
-				<br><br>
-
-			</div>
-			<div class="contact">
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.2.8/d3.min.js"></script>
-
-				<script type="text/javascript" charset="utf-8">
-					d3.text("data.csv", function(data) {
-						var parsedCSV = d3.csv.parseRows(data);
-
-						var container = d3.select(".contact")
-							.append("table")
-
-							.selectAll("tr")
-							.data(parsedCSV).enter()
-							.append("tr")
-
-							.selectAll("td")
-							.data(function(d) {
-								return d;
-							}).enter()
-							.append("td")
-							.text(function(d) {
-								return d;
-							});
-					});
-				</script>
-				<script>
-					var script = $('body').attr("onclick")
-					$('body').on('click', 'td', function(event) {
-						console.log(event['target'].textContent);
-						$("#emailForm").val(event['target'].textContent);
-					});
-				</script>
 			</div>
 		</div>
 	</div>

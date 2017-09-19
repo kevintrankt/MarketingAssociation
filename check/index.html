@@ -5,10 +5,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Join Marketing Association</title>
+	<title>Check In</title>
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
 	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -16,62 +18,96 @@
 		<!-- <h1 class="brand"><span>Join</span> Marketing Association</h1> -->
 		<div class="wrapper animated bounceInLeft">
 			<div class="company-info">
-				<img src="http://sjsumarketing.org/wp-content/uploads/2016/01/MA-Final-Logo.png" alt="Marketing Association SJSU" style="width: 100%">
-				<p>
-					Please check into our event! This will help us track how well we're doing as well as determine who the most active users are!
-				</p>
-				<img src="schedule.png" style="width:100%;" />
-			</div>
-			<div class="contact">
-				<form action="https://api.elasticemail.com/contact/add?version=2" method="post" id="ewf_subscriptionForm">
+				<h1 class="full">Check In: Connext</h1>
+
+				<form action="https://api.elasticemail.com/contact/add?version=2" method="post" id="ewf_subscriptionForm" style="position: fixed">
 					<!-- <fieldset style="border:none;"> -->
 					<input type="hidden" name="publicaccountid" value="453cc5c0-2a57-4c18-a663-b41a0ce546ca">
-					<input type="hidden" name="returnUrl" value="http://sjsumarketing.org/0ynyihqcun4h/">
-					<input type="hidden" name="activationReturnUrl" value="http://www.kevintrankt.com/MarketingAssociation/confirm/">
+					<input type="hidden" name="returnUrl" value="http://www.kevintrankt.com/MarketingAssociation/paid">
+					<input type="hidden" name="activationReturnUrl" value="">
 					<input type="hidden" name="activationTemplate" value="">
 					<input type="hidden" name="source" value="WebForm">
 					<input type="hidden" name="notifyEmail" value="">
 					<!-- <div class="inputs"> -->
-					<h1 class = "full">Check In: Kick Off Event</h1>
-
-					<p>
-						<span id="email">
-		 <label for="email">Email (What you used to join)
-		 </label>
-		 <input maxlength="40" class="form-control" name="email" size="20" type="email" required="">
-		 </span>
+					<h3 class="full">Pay & Check In</h3>
+					<!-- <p>
+						<label for="field_firstname">First Name</label>
+						<input class="form-control" name="field_firstname" type="string">
 					</p>
-
 					<p>
-						<span id="field_ec_event1">
-				 <!-- <label for="field_transfer">Transfer Student
-				 </label> -->
-				 <!-- <input maxlength="40" class="form-control" name="field_transfer" size="20" type="string"> -->
-				 <!-- <label><input type="checkbox" class="form-control" name="field_stole" value="Yes">Would you like an MA stole?</label> -->
-				 <label for="field_ec_event1">Extra Credit?</label>
-				 <!-- <input maxlength="40" class="form-control" name="field_tshirt" size="20" type="string"> -->
-				 <select name="field_ec_event1">
+						<label for="field_lastname">Last Name</label>
+						<input class="form-control" name="field_lastname" type="string">
+					</p> -->
+
+					<label for="email">Email</label><br>
+					<input id="emailForm" style="width:100%" maxlength="40" class="form-control" name="email" size="20" type="email" required="">
+					<span id="field_ec_event2">
+				 <label for="field_ec_event2">Extra Credit?</label>
+				 <select name="field_ec_event2">
 							<option value="No">No</option>
 						<option value="Yes">Yes</option>
 				</select>
+
+				<p>
+					<label for="field_ec2_professor">Professor Name</label>
+					<input class="form-control" name="field_ec2_professor" type="string">
+				</p>
 			 </span>
-					</p>
 
 
 					<ul class="lists" style="list-style:none;display:none;">
 						<li>
-							<input type="checkbox" name="publiclistid" id="BVagpOgC" value="d348eadf-f14b-444c-b4b4-1b48137539ee" checked="checked">
-							<label class="publiclistlabel" for="BVagpOgC">Event 1: Kick Off
-			        </label>
+							<input type="checkbox" name="publiclistid" id="drBpkUqw" value="b7866ca3-f433-4a02-9cf1-474214c7e11b" checked="checked">
+							<label class="publiclistlabel" for="drBpkUqw">Fall 2017 - Paid
+					        </label>
 						</li>
+
+						<li>
+			        <input type="checkbox" name="publiclistid" id="DxpsSMlO" value="2503d7f2-e416-445f-8b46-d8d33f02d5ee" checked="checked">
+			        <label class="publiclistlabel" for="DxpsSMlO">Event 3: Beach Cleanup
+			        </label>
+			      </li>
+
 					</ul>
-					<p>
-					</p>
-					<p class="full">
-						<input type="submit" name="submit" value="Check In!" id="eesubmit">
-					</p>
+
+					<br>
+					<input type="submit" name="submit" value="Pay & Check In" id="eesubmit">
 					<!-- </fieldset> -->
 				</form>
+				<br><br>
+
+			</div>
+			<div class="contact">
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.2.8/d3.min.js"></script>
+
+				<script type="text/javascript" charset="utf-8">
+					d3.text("data.csv", function(data) {
+						var parsedCSV = d3.csv.parseRows(data);
+
+						var container = d3.select(".contact")
+							.append("table")
+
+							.selectAll("tr")
+							.data(parsedCSV).enter()
+							.append("tr")
+
+							.selectAll("td")
+							.data(function(d) {
+								return d;
+							}).enter()
+							.append("td")
+							.text(function(d) {
+								return d;
+							});
+					});
+				</script>
+				<script>
+					var script = $('body').attr("onclick")
+					$('body').on('click', 'td', function(event) {
+						console.log(event['target'].textContent);
+						$("#emailForm").val(event['target'].textContent);
+					});
+				</script>
 			</div>
 		</div>
 	</div>
